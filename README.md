@@ -1,36 +1,82 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# User Management App
+
+A **React + Redux** application for managing users, with **pagination, sorting, searching, and modal functionality**. Built with **Next.js (App Router)** and **Tailwind CSS** for styling.
+
+## Features
+
+**User Listing**: Fetch and display users from an API.
+**Search**: Search users by name or email.
+**Sorting**: Sort users by name, email, or username.
+**Pagination**: Navigate through user pages with Previous & Next buttons.
+**Modal View**: Click on a user to view details in a modal.
+**Error Handling**: Gracefully handle API errors.
+**Optimized Fetching**: Uses a single API call per page with smart data handling.
+
+##  Tech Stack
+
+**React** (with hooks)
+**Next.js** (`use client`)
+**Redux Toolkit** (State Management)
+**Tailwind CSS** (Modern Styling)
+**JSONPlaceholder API** (Mock Data)
 
 ## Getting Started
 
-First, run the development server:
+1. **Clone the repository**
+
+```bash
+git clone https://github.com/behnam-nbt/behnam-nabat-saeid-jalilibashashi-task.git
+```
+
+2. **Install dependencies**
+
+```bash
+npm install
+# or
+yarn install
+```
+
+3. **Start the development server**
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. **Open the app**
+Visit http://localhost:3000 in your browser.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+5. **Project Structure**
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+/app
+  ├── components       
+  │   ├── modules                     # Reusable UI Components (Modal)
+  │   │   ├── Modal.js                
+  │   ├── templates
+  │   │   ├── UserPage.js             # Main User Page
+  ├── /redux         # Redux Toolkit store & slices
+  ├── layout.js      # Layout Configuration
+  ├── globals.css    # Global Styles (Tailwind)
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+##  API Reference
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+**Users Endpoint**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+GET https://jsonplaceholder.typicode.com/users?_limit=5&_page={page}
+```
 
-## Deploy on Vercel
+## Usage Guide
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+**Searching**
+- Type in the search bar to filter users by name or email.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+**Sorting**
+- Click "Next" or "Previous" buttons to navigate between pages.
+- If no more data is available, the Next button will be disabled.
+
+**User Modal**
+- Click on a user row to open a modal with more details.
+
+
+ Made with ❤️ by Behnam Nabati
