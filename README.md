@@ -45,19 +45,6 @@ npm run dev
 4. **Open the app**
 Visit http://localhost:3000 in your browser.
 
-5. **Project Structure**
-
-/app
-  ├── components       
-  │   ├── modules                     # Reusable UI Components (Modal)
-  │   │   ├── Modal.js                
-  │   ├── templates
-  │   │   ├── UserPage.js             # Main User Page
-  ├── /redux         # Redux Toolkit store & slices
-  ├── layout.js      # Layout Configuration
-  ├── globals.css    # Global Styles (Tailwind)
-
-
 ##  API Reference
 
 **Users Endpoint**
